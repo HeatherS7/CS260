@@ -1,0 +1,53 @@
+body, html {
+  background-color: #A87676;
+}
+
+h1, h2 {
+  color: white;
+  text-align: center;
+}
+h2 {
+  margin-top: 3%;
+}
+p {
+  color: white;
+  font-size: 1.25rem;
+}
+
+#questions {
+  margin: 5px;
+}
+.left-side, .middle, .right-side, {
+  text-align: center;
+  align-items: center;
+}
+.row {
+  margin: 4% 5% 2% 5% !important;
+  padding: 3% !important;
+  align-items: center;
+  text-align: center;
+  border: 6px solid rgba(255,255,255,0.5);
+  border-radius: 20px;
+  background-color: rgba(0,0,0,0.5);
+}
+img {
+  width: 40%;
+
+}
+
+@media only screen and (min-width: 768px) {
+  .left-side {
+    text-align: right;
+  }
+
+  .middle {
+    text-align: center;
+  }
+
+  .right-side {
+    text-align: left;
+  }
+  img {
+    width: 95%;
+  }
+}

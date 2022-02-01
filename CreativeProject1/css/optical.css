@@ -1,0 +1,46 @@
+body {
+  background-color: #704F4F;
+}
+#illusions {
+  background-color: #D15454;
+  border: 6px solid black;
+  border-radius: 20px;
+  margin: 3px 10px;
+}
+p {
+  color: white;
+  text-align: center;
+}
+
+.carousel-item {
+  text-align: center;
+}
+.carousel-item img {
+  width: 95%;
+  border: 6px solid black;
+  border-radius: 20px;
+  text-align: center;
+}
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.controllers {
+  filter: saturate(0.75);
+}
+
+@media only screen and (min-width: 768px) {
+  .carousel-item img {
+    width: 40%;
+  }
+  .footer {
+    position: relative;
+    margin-top: 10px;
+  }
+}
