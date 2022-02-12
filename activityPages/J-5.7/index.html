@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Github IDs</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Github IDs</h1>
+        <form id="entryForm">
+            <input id="user">
+            <input type="submit" value="Submit">
+        </form>
+        <div id="github">
+            <!-- This is where the username will show up-->
+        </div>
+    </body>
+    <script>
+        document.getElementById("entryForm").addEventListener("submit", function(event) {
+            event.preventDefault()
+
+            // gets the id the person inputs
+            const id = document.getElementById("user").value
+            console.log("id: " + id)
+            
+            // gets the api endpoint and attaches the id to the url
+            const fullUrl = "https://api.github.com/users/" + id
+            console.log(fullUrl)
+
+            fetch(fullUrl)
+            .then(function(response) {
+                // gets the json
+                return response.json()
+            }).then(function(json) {
+                // adds it to the webpage as html
+                console.log(json)
+                const idResponse = json["id"]
+                const strong = document.createElement("strong")
+                strong.appendChild(document.createTextNode("ID: " + idResponse))
+
+                const container = document.getElementById("github")
+                container.textContent = ""
+                container.appendChild(strong)
+            })
+        })
+
+    </script>
+</html>
