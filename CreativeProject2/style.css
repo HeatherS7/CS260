@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Nunito:wght@500&display=swap');
+
+body {
+    background-color: #DFF5B0;
+    background-image: url(backgroundImage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5vh;
+}
+
+#home {
+    background-color: #F5CFC8;
+    background-image: linear-gradient(to bottom right, #F5CFC8, #ADC4F0);
+    min-height: 70vh;
+}
+
+#findLyrics {
+    background-color: #ADC4F0;
+    background-image: linear-gradient(to top right, #ADC4F0, #7E8BA3);
+    min-height: 70vh;
+}
+
+#findGenre {
+    background-color: #7E8BA3;
+    background-image: linear-gradient(to bottom right, #7E8BA3, #A37C76);
+    min-height: 70vh;
+}
+
+#randomQuote {
+    background-color: #A37C76;
+    background-image: linear-gradient(to top right, #A37C76, #DBF0AD);
+    min-height: 70vh;
+}
+
+.slidecontainer {
+    margin: 1vh 2vw;
+}
+
+h1 {
+    font-size: calc(2rem + 1.5vw);
+    text-align: center;
+    font-family: 'Gideon Roman', cursive;
+    margin: 0 1% 0 1%;
+    color: white;
+}
+
+h2 {
+    font-size: calc(1.25rem + 1.5vw);
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+label {
+    font-size: calc(1rem + 1vw);
+    font-family: 'Nunito', sans-serif;
+    padding: 3px 6px;
+}
+
+.songLabels {
+    padding: 3px 6px;
+    text-align: right;
+    width: 150px;
+    font-size: calc(1rem + 1vw);
+    font-family: 'Nunito', sans-serif;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: calc(1rem + 1vw);
+    padding: 3px 6px;
+}
+
+fieldset{
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    padding: 0 .625em;
+}
+
+input[type="text"] {
+    font-size: inherit;
+}
+
+input[type="radio"] {
+    margin-left: 3vw;
+}
+
+input[type="submit"] {
+    font-family: 'Nunito', sans-serif;
+    margin: 2vw;
+}
+
+p {
+    font-size: 1rem;
+    padding: 1vh 2vw;
+    font-family: 'Nunito', sans-serif;
+}
+
+.genre {
+    font-size: calc(1rem + 1vw);
+    text-align: left;
+    margin-left: 5vw;
+}
+.bigger {
+    font-size: calc(1rem + 1.5vw);
+    margin: auto;
+    color: black;
+    padding: 3vw;
+    font-family: 'Nunito', sans-serif;
+    text-align:  center;
+}
+
+#movieQuote {
+    text-align: left;
+    margin-left: 3vw;
+}
+
+hr {
+    border: 3px solid black;
+}
+
+.nav-link {
+    color: rgb(16, 159, 224);
+}
+
+.nav-link:hover {
+    color: rgb(29, 33, 236);
+}
+
+.nav-item {
+    background-color: #f2f2f2;
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+
+footer {
+    background-color: white;
+    margin: auto;
+    bottom: 0;
+    width: 70%;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-tabs {
+        display:block;
+    }
+}
