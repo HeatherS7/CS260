@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Activity V1</title>
+        <meta charset="utf-8">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+
+
+        <h1>Lesson 1</h1>
+        <div id="root1">
+            <!-- data binding using the v-model directive-->
+       
+            <input type="text" v-model="message">
+            <!-- template using mustache syntax -->
+            <p>The value of the input is {{ message }}.</p>
+       
+        </div>
+
+        <h1>Lesson 2</h1>
+        <div id="root2">
+            <ul>
+                <!-- Loop through each name in names and render it -->
+
+                <li v-for="name in names" v-text="name"></li>
+            </ul>
+            <input type="text" v-model="newName">
+            <button @click="addName">Add Name</button>
+        </div>
+
+        <h1>Lesson 3</h1>
+        <div id="root3">
+            <button :title="title">Hover over me</button>
+            <h1 :class="className">Hello World</h1>
+            <button :class="{ 'blue': isLoading}" @click="toggleLoading">Click Me</button>
+        
+        
+        </div>
+
+        <h1>Lesson 4</h1>
+        <div id="root">
+            <p> {{ message }}</p>
+            <p>I said, {{ screaming }}</p>
+            <h2>Tasks</h2>
+            <ul>
+                <li v-for="task in tasks" v-text="task.description"></li>
+            </ul>
+            <h2>Incomplete Tasks</h2>
+            <ul>
+                <li v-for="task in incompleteTasks" v-text="task.description"></li>
+            </ul>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
