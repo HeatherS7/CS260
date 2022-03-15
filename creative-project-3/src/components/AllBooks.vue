@@ -19,7 +19,7 @@
       </div>
       <div class="buttons">
         <button v-if="book.websiteLink !== null" @click="visitWebsite(book.websiteLink)" class="visitWebsite">Visit book website</button>
-        <button @click.prevent="viewSeries(book)" class="viewSeries">View full series</button>
+        <button class="viewSeries"><router-link :to="{ name: 'View full series', params: { series: book }}">View full series</router-link></button>
       </div>
     </div>
   </div>
@@ -123,6 +123,11 @@ button:hover {
 button:active {
   background: black;
   color: white;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) {

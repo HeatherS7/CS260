@@ -235,8 +235,8 @@ let bookSeries = [
     seriesName: "Beyonders",
     author: "Brandon Mull",
     numBooks: 3,
-    websiteLink: null,
-    bookImage: null,
+    websiteLink: "http://brandonmull.com/category/beyonders/",
+    bookImage: "Beyonders.jpg",
     description: "Two young teenagers are brought to another world where they go up against an evil emperor-wizard and learn what it really means to be brave.",
     books: [
       {
@@ -263,8 +263,8 @@ let bookSeries = [
     seriesName: "The Maze Runner",
     author: "James Dashner",
     numBooks: 3,
-    websiteLink: null,
-    bookImage: null,
+    websiteLink: "https://jamesdashner.com/books",
+    bookImage: "MazeRunner.jpg",
     description: "A group of young people are trapped inside an area surrounded by an inescapable maze. They must crack the maze if they ever hope to return to a home they don't remember.",
     books: [
       {
@@ -291,8 +291,8 @@ let bookSeries = [
     seriesName: "Divergent Trilogy",
     author: "Veronica Roth",
     numBooks: 3,
-    websiteLink: null,
-    bookImage: null,
+    websiteLink: "https://veronicarothbooks.com/books/divergent/",
+    bookImage: "Divergent.png",
     description: "In a dystopian society, a community flourishes by maintaining loyalty to one's faction. But when the factions begin fighting, chaos ensues",
     books: [
       {
@@ -319,8 +319,8 @@ let bookSeries = [
     seriesName: "The Chronicles of Narnia",
     author: "C.S. Lewis",
     numBooks: 7,
-    websiteLink: null,
-    bookImage: null,
+    websiteLink: "https://www.narnia.com/books",
+    bookImage: "ChroniclesOfNarnia.jpg",
     description: "Four siblings are brought to another world where they fight an evil witch and learn about the value of believing as they befriend the lion, Aslan.",
     books: [
       {
@@ -371,8 +371,8 @@ let bookSeries = [
     seriesName: "Hagenheim",
     author: "Melanie Dickerson",
     numBooks: 11,
-    websiteLink: null,
-    bookImage: null,
+    websiteLink: "https://melaniedickerson.com/index.php/series/fairy-tale-romance-hagenheim/",
+    bookImage: "Hagenheim.jpg",
     description: "Several young maidens with dreams follow their hearts, fall in love, and work to obtain their fairy-tale endings.",
     books: [
       {
