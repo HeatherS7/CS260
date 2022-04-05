@@ -20,7 +20,9 @@ import axios from 'axios';
 
 export default {
   name: 'BookForm',
-  props: ['bookId'],
+  props: {
+    fullbook: Object
+  },
   data() {
     return {
       title: "",
@@ -31,14 +33,16 @@ export default {
     }
   },
   created() {
-    console.log(bookId);
-    if (bookId != null) {
-      this.book = getBook();
-      if (this.book) {
-        this.title = this.book.title,
-        this.author = this.book.author,
-        this.story = this.book.story
-      }
+    if (this.fullbook?._id != null) {
+      this.getBook()
+        .then(book => {
+          console.log(book);
+          if (book) {
+            this.title = this.book.title,
+            this.author = this.book.author,
+            this.story = this.book.book
+          }
+        })
     }
   },
   methods: {
@@ -49,8 +53,8 @@ export default {
       }
 
       try {
-        if (bookId) {
-          let response = await axios.put("/api/book/" + bookId, {
+        if (this.fullbook?._id != null) {
+          let response = await axios.put("/api/book/" + this.fullbook._id, {
             title: this.title,
             author: this.author,
             book: this.story
@@ -70,8 +74,9 @@ export default {
     },
     async getBook() {
       try {
-      let response = await axios.get("/api/book/" + bookId);
-      return response.data;
+      let response = await axios.get("/api/book/" + this.fullbook._id);
+      this.book = response.data[0];
+      return this.book;
       } catch (error) {
         console.log(error);
         return null;
@@ -82,9 +87,17 @@ export default {
 </script>
 
 <style scoped>
-/* label {
+label {
+  color: white;
   text-align: left;
-} */
+  margin: 0.125em 0.5em;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 input[type="text"], textarea {
   font-size: 1.25em;
   text-align: left;
@@ -93,7 +106,7 @@ input[type="text"], textarea {
 }
 
 input {
-  width: 80%;
+  width: 50vw;
   text-align: right;
 }
 
@@ -106,5 +119,9 @@ p {
   font-size: 1.25em;
   text-align: center;
   color: red;
+}
+
+.button {
+  margin-bottom: 10vh;
 }
 </style>

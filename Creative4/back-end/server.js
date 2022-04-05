@@ -62,7 +62,7 @@ app.put('/api/book/:id', async (req, res) => {
     });
     newBook.title = req.body.title;
     newBook.author = req.body.author;
-    newBook.book = req.body.story;
+    newBook.book = req.body.book;
     newBook.save();
     res.sendStatus(200);
   } catch (error) {

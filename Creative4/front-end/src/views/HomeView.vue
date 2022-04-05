@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="editBook" v-else-if="isEditing">
-      <BookForm :bookId="this.fullBook._id" @editedBook="editedBook($event)"/>
+      <BookForm :fullbook="this.fullBook" @editedBook="editedBook($event)"/>
     </div>
     <div class="viewBook" v-else>
       <div class="buttons">
@@ -71,7 +71,7 @@ export default {
     },
     editedBook() {
       this.isEditing = false;
-      this.fullBook = getBook(this.fullBook)
+      this.getBook(this.fullBook)
     },
     returnToFullView() {
       this.isSelected = false;
@@ -79,15 +79,14 @@ export default {
     },
     viewBook(book) {
       console.log(book);
-      this.selectedBook = this.getBook(book);
+      this.fullBook = this.getBook(book);
       this.isSelected = true;
     },
     async getBook(book) {
       try {
         let response = await axios.get('/api/book/' + book._id);
         this.fullBook = response.data[0];
-        console.log(this.fullBook);
-        return true;
+        return this.fullBook;
       } catch (error) {
         console.log(error);
       }
@@ -122,7 +121,8 @@ export default {
   border-radius: 30px;
   padding: 1.5em;
   margin-top: 1.125em;
-  height: 75vh;
+  min-height: 75vh;
+  margin-bottom: 2em;
 }
 
 .home {
