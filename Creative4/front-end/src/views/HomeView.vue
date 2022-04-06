@@ -78,13 +78,13 @@ export default {
       this.fullBook = null;
     },
     viewBook(book) {
-      console.log(book);
+      // console.log(book);
       this.fullBook = this.getBook(book);
       this.isSelected = true;
     },
     async getBook(book) {
       try {
-        console.log(book);
+        // console.log(book);
         let response = await axios.get('/api/book/' + book._id);
         this.fullBook = response.data[0];
         return this.fullBook;

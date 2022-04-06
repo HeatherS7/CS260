@@ -36,7 +36,7 @@ export default {
     if (this.fullbook?._id != null) {
       this.getBook()
         .then(book => {
-          console.log(book);
+          // console.log(book);
           if (book) {
             this.title = this.book.title,
             this.author = this.book.author,
@@ -59,7 +59,7 @@ export default {
             author: this.author,
             book: this.story
           })
-          console.log(response);
+          // console.log(response);
           this.$emit('editedBook', this.title);
         } else {
           let response = await axios.post("/api/book", {
