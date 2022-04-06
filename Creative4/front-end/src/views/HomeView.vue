@@ -84,6 +84,7 @@ export default {
     },
     async getBook(book) {
       try {
+        console.log(book);
         let response = await axios.get('/api/book/' + book._id);
         this.fullBook = response.data[0];
         return this.fullBook;

@@ -59,6 +59,7 @@ export default {
             author: this.author,
             book: this.story
           })
+          console.log(response);
           this.$emit('editedBook', this.title);
         } else {
           let response = await axios.post("/api/book", {
